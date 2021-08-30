@@ -6,9 +6,8 @@ class taskController{
         try {
             let { title, categoryId } = req.body
             let createdData = await Task.create({title, categoryId})
-            res.status(201).json({
-                msg: 'task created successfully'
-            })
+            // console.log(createdData);
+            res.status(201).json(createdData)
         } catch (error) {
             res.status(500).json(error)
         }

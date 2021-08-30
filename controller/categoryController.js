@@ -16,9 +16,7 @@ class categoryController{
                 name
             }
             let createdData = await Category.create(newData)
-            res.status(201).json({
-                msg : 'Category created successfully'
-            })
+            res.status(201).json(createdData)
         } catch (error) {
             res.status(500).json(error)
         }
